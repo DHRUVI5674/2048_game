@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Header */
+.game {
+  width: min(420px, 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: clamp(32px, 6vw, 50px);
+}
+
+#score {
+  background: brown;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: clamp(16px, 3vw, 24px);
+}
+
+#score span {
+  display: block;
+}
+
+p {
+  margin-top: 15px;
+  font-size: clamp(18px, 4vw, 28px);
+  text-align: center;
+}
+
+/* Grid */
+.grid {
+  width: min(90vw, 440px);
+  aspect-ratio: 1 / 1;
+  margin-top: 20px;
+  padding: 10px;
+  background: #d6933b;
+  border: 5px solid brown;
+  background-color: #bbada0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  
+}
+
+/* Tiles */
+.grid div {
+  border-radius: 6px;
+  font-size: clamp(20px, 6vw, 40px);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #711010;
+  filter: saturate(0.85);
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Tile colors */
+.tile-2 { background: #eee4da; }
+.tile-4 { background: #ede0c8; }
+.tile-8 { background: #f2b179; color:#fff; }
+.tile-16 { background: #f59563; color:#fff; }
+.tile-32 { background: #f67c5f; color:#fff; }
+.tile-64 { background: #f65e3b; color:#fff; }
+.tile-128 { background: #edcf72; }
+.tile-256 { background: #edcc61; }
+.tile-512 { background: #edc850; }
+.tile-1024 { background: #edc53f; }
+.tile-2048 { background: #edc22e; }
+
